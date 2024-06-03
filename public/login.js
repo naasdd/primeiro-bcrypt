@@ -1,11 +1,11 @@
 const { response } = require("express")
 
-async function login(){
+function login(){
     event.preventDefault()
     let email = document.getElementById('inputemail').value
     let senha = document.getElementById('inputsenha').value
 
-    await fetch('/login', {
+    fetch('/login', {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify({ email, senha })
